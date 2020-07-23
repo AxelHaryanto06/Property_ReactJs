@@ -16,7 +16,7 @@ var routes = require('./routes');
 routes(app);
 
 //daftarkan menu routes dari index
-//app.use(require('./middleware'));
+app.use(require('./middleware'));
 
 app.listen(3002, () => {
     console.log(`Server started on port 3002`);
