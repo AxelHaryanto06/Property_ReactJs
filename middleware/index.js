@@ -4,7 +4,7 @@ var router = express.Router();
 //var verifikasi = require('./verifikasi');
 
 //daftarkan menu regis
-router.post('/register', auth.regist);
+router.post('/api/v1/register', auth.registrasi);
 //router.post('/api/v1/login', auth.login);
 
 //alamat halaman otorisasi
