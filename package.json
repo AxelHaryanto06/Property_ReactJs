@@ -18,9 +18,9 @@
   "author": "axel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AxelHaryanto06/restapiproperty/issues"
+    "url": "https://github.com/AxelHaryanto06/Property_ReactJs/issues"
   },
-  "homepage": "https://github.com/AxelHaryanto06/restapiproperty#readme",
+  "homepage": "https://github.com/AxelHaryanto06/Property_ReactJs#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
