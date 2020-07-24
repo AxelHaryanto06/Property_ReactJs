@@ -1,0 +1,140 @@
+/* Frame 2 */
+
+.picture1{
+    position: absolute;
+    width: 527px;
+    height: 720px;
+    left: 0px;
+    top: 0px;
+
+    border: 1px solid none;
+    box-sizing: border-box;
+}
+
+/* LOGIN */
+
+.login{
+    position: absolute;
+    width: 116px;
+    height: 59px;
+    left: 868px;
+    top: 117px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 39.06px;
+    line-height: 59px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+/* Email */
+
+.email{
+    position: absolute;
+    width: 55px;
+    height: 30px;
+    top: 246px;
+    left: 738px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+/* identical to box height */
+
+    color: #000000;
+}
+
+#exampleEmail{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    top: 300px;
+    left: 738px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Password */
+
+.password{
+    position: absolute;
+    width: 97px;
+    height: 30px;
+    top: 368px;
+    left: 738px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+#examplePassword{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    top: 422px;
+    left: 738px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Button Login */
+#login-button{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    top: 511px;
+    left: 738px;
+
+    background: #253870;
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21.33px;
+    line-height: 32px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+/* Alert Danger */
+#salah_password{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    top: 582px;
+    left: 738px;
+}
+
+/* Link Register */
+.register-link{
+    position: absolute;
+    top: 652px;
+    left: 793px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14.4px;
+    line-height: 22px;
+}

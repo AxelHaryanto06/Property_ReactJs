@@ -4,6 +4,8 @@ import { Button, Form, FormGroup, Label, Input, Container, Row, Col, CardImg } f
 import axios from 'axios'
 import { AuthContext } from '../App'
 import { Link } from 'react-router-dom';
+import "./CSS/Login.css"
+
 const qs = require('querystring')
 const api = 'http://localhost:3002'
 
@@ -71,40 +73,39 @@ function LoginComponent() {
             <Container>
                 <br />
                 <Row>
-                    <Col>
-                        <CardImg width="100%" src="https://placeimg.com/640/380/people" />
-                    </Col>
-                    <Col>
-                        <h1>Login Form</h1>
-                        <hr />
-                        <Form onSubmit={handleFormSubmit}>
-                            <FormGroup>
-                                <Label for="exampleEmail">Email</Label>
-                                <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" value={data.email} onChange={handleInputChange} />
-                            </FormGroup>
-                            <FormGroup>
-                                <Label for="examplePassword">Password</Label>
-                                <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" value={data.password} onChange={handleInputChange} />
-                            </FormGroup>
+                    <div className="picture">
+                        <img className="picture1" src="https://images.unsplash.com/photo-1448630360428-65456885c650?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1494&q=80" alt="" />
+                    </div>
+                    <h1 className="login">LOGIN</h1>
+                    <Form onSubmit={handleFormSubmit}>
+                        <div className="input-login">
+                            <div className="input-email">
+                                <Label className="email">Email</Label>
+                                <Input type="email" name="email" id="exampleEmail" placeholder="Masukkan Email" value={data.email} onChange={handleInputChange} />
+                            </div>
+                        </div>
+                        <div>
+                            <Label className="password">Password</Label>
+                            <Input type="password" name="password" id="examplePassword" placeholder="Masukkan Password" value={data.password} onChange={handleInputChange} />
+                        </div>
 
-                            {data.errorMessage && (
-                                <div className="alert alert-danger" role="alert">
-                                    {data.errorMessage}
-                                </div>
-                            )}
+                        {data.errorMessage && (
+                            <div className="alert alert-danger" id="salah_password" role="alert">
+                                {data.errorMessage}
+                            </div>
+                        )}
 
-                            <Button disabled={data.isSubmitting}>
-                                {data.isSubmitting ? (
-                                    "..Loading"
-                                ) :
-                                    (
-                                        "Login"
-                                    )
-                                }
-                            </Button>
-                        </Form>
-                        <p>Belum punya akun ? <Link to="/register">Register</Link></p>
-                    </Col>
+                        <Button id="login-button" disabled={data.isSubmitting}>
+                            {data.isSubmitting ? (
+                                "..Loading"
+                            ) :
+                                (
+                                    "Login"
+                                )
+                            }
+                        </Button>
+                    </Form>
+                    <p className="register-link">Belum punya akun ? <Link to="/register">Register Sekarang</Link></p>
                 </Row>
             </Container>
         </Fragment>
