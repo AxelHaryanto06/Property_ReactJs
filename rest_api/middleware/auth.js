@@ -12,13 +12,12 @@ exports.registrasi = function(req, res) {
     var post = {
         username: req.body.username,
         email: req.body.email,
-        password: md5(req.body.password),
-        role: req.body.role,
-        tanggal_daftar: new Date()
+        nama_user: req.body.nama_user,
+        password: md5(req.body.password)
     }
 
     var query = "SELECT email FROM ?? WHERE ??=?";
-    var table = ["user", "email", post.email]
+    var table = ["t_user", "email", post.email]
 
     query = mysql.format(query,table);
 
@@ -28,7 +27,7 @@ exports.registrasi = function(req, res) {
         } else {
             if (rows.length == 0) {
                 var query = "INSERT INTO ?? SET ?";
-                var table = ["user"];
+                var table = ["t_user"];
                 query = mysql.format(query, table);
                 connection.query(query, post, function(error, rows) {
                     if (error) {
@@ -42,4 +41,60 @@ exports.registrasi = function(req, res) {
             }
         }
     })
+}
+
+//controller login
+exports.login = function(req, res) {
+    var post = {
+        password: req.body.password,
+        email: req.body.email
+    }
+
+    var query = "SELECT * FROM ?? WHERE ??=? AND ??=?";
+    var table = ["t_user", "password", md5(post.password), "email", post.email];
+
+    query = mysql.format(query,table);
+    connection.query(query, function(error, rows) {
+        if (error) {
+            console.log(error);
+        } else {
+            if (rows.length == 1) {
+                var token = jwt.sign({rows}, config.secret, {
+                    expiresIn: 1440
+                });
+                id_user = rows[0].id_user;
+                username = rows[0].username;
+
+                var data = {
+                    id_user: id_user,
+                    access_token: token,
+                    ip_address: ip.address()
+                }
+                
+                var query = "INSERT INTO ?? SET ?";
+                var table = ["akses_token"];
+
+                query = mysql.format(query, table);
+                connection.query(query, data, function(error, rows){
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        res.json({
+                            success: true,
+                            message: 'Token JWT Generated!',
+                            token:token,
+                            currUser: data.id_user,
+                            user: username
+                        });
+                    }
+                });
+            }else {
+                 res.json({"Error": true, "Message":"Email atau password salah !"});
+            }
+        }
+    });
+}
+
+exports.halamanrahasia = function(req,res) {
+    response.ok("Halaman ini hanya untuk user dengan role = 2",res);
 }

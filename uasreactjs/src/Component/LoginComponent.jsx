@@ -1,5 +1,5 @@
 import React, { Fragment, useContext, useState } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, Container, Row, Col, CardImg } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Container, Row, Col, CardImg } from 'reactstrap';
 
 import axios from 'axios'
 import { AuthContext } from '../App'
