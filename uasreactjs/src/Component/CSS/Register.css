@@ -1,0 +1,203 @@
+/* Frame 2 */
+
+.picture1{
+    position: absolute;
+    width: 527px;
+    height: 720px;
+    left: 0px;
+    top: 0px;
+
+    border: 1px solid none;
+    box-sizing: border-box;
+}
+
+/* SIGN UP */
+
+.signup{
+    position: absolute;
+    left: 851px;
+    top: 84px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 39.06px;
+    line-height: 59px;
+    /* identical to box height */
+
+
+    color: #000000;
+}
+
+/* Nama Lengkap */
+
+.namauser-1{
+    position: absolute;
+    width: 152px;
+    height: 30px;
+    left: 578px;
+    top: 195px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+
+#NamaLengkap{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    left: 813px;
+    top: 185px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Username */
+
+.username-1{
+    position: absolute;
+    width: 104px;
+    height: 30px;
+    left: 578px;
+    top: 272px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+
+#UsernameBox{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    left: 813px;
+    top: 262px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Email */
+
+.email-1{
+    position: absolute;
+    width: 55px;
+    height: 30px;
+    left: 578px;
+    top: 349px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+
+#EmailBox{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    left: 813px;
+    top: 339px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Password */
+
+.password-1{
+    position: absolute;
+    width: 97px;
+    height: 30px;
+    left: 578px;
+    top: 426px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+
+#PasswordBox{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    left: 813px;
+    top: 416px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Button Sign Up */
+#signup-button{
+    position: absolute;
+    width: 376px;
+    height: 49px;
+    top: 534px;
+    left: 746px;
+
+    background: #253870;
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21.33px;
+    line-height: 32px;
+    /* identical to box height */
+
+    color: #FFFFFF;
+}
+
+/* Sudah punya akun ? Silakan Login */
+
+.login-link{
+    position: absolute;
+    width: 245px;
+    height: 22px;
+    top: 652px;
+    left: 803px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14.4px;
+    line-height: 22px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}

@@ -37,7 +37,7 @@ exports.registrasi = function(req, res) {
                     }
                 });
             }else {
-                response.ok("Email sudah terdaftar !",res);
+                response.ok({"Message":"Email sudah terdaftar !"},res);
             }
         }
     })
