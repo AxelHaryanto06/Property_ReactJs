@@ -18,7 +18,7 @@ function RegisterComp() {
         nama_user: "",
         password: "",
         isSubmitting: false,
-        response: null
+        response: ''
     }
 
     const [data, setData] = useState(initialState)
@@ -53,7 +53,7 @@ function RegisterComp() {
 
         axios.post(api + '/api/v1/register', qs.stringify(requestBody), config)
             .then(res => {
-                if (res.data.success === true) {
+                if (res.data.values === true) {
                     dispatch({
                         type: "SIGN UP",
                         payload: res.data
@@ -115,7 +115,7 @@ function RegisterComp() {
                             }
                         </Button>
                     </Form>
-                    <p className="login-link">Sudah punya akun ? <Link to="/">Silakan Login</Link></p>
+                    <p className="login-link">Sudah punya akun ? <Link to="/login">Silakan Login</Link></p>
                 </Row>
             </Container>
         </Fragment>

@@ -33,7 +33,7 @@ exports.registrasi = function(req, res) {
                     if (error) {
                         console.log(error);
                     } else {
-                        response.ok("Berhasil menambahkan data user baru", res);
+                        response.ok("Berhasil membuat akun", res);
                     }
                 });
             }else {

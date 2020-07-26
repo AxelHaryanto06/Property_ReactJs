@@ -1,9 +1,13 @@
-import React, { createContext, useReducer} from 'react';
-import { BrowserRouter, Switch, Redirect, Route} from 'react-router-dom';
+import React, { createContext, useReducer } from 'react';
+import { BrowserRouter, Switch, Redirect, Route, withRouter } from 'react-router-dom';
 import MenuComp from './Component/MenuComp';
 import HomeComp from './Component/HomeComp';
 import LoginComponent from './Component/LoginComponent';
 import RegisterComp from './Component/RegisterComp';
+import Services from './Component/Services';
+import TambahComp from './Component/TambahComp';
+import { Navbar } from 'reactstrap';
+import EditComp from './Component/EditComp';
 
 //Context
 export const AuthContext = createContext()
@@ -34,7 +38,7 @@ const reducer = (state, action) => {
         isAuthenticated: false,
         user: null
       }
-    
+
     default:
       return state
   }
@@ -52,7 +56,7 @@ function App() {
           state,
           dispatch
         }}>
-          <MenuComp />
+          <Main/>
           {!state.isAuthenticated ?
             <Redirect
               to={{
@@ -65,14 +69,31 @@ function App() {
               }}
             />
           }
-
-          <Route exact path="/" component={LoginComponent}/>
-          <Route exact path="/homepage" component={HomeComp}/>
-          <Route exact path="/register" component={RegisterComp}/>
-        </AuthContext.Provider>
+       </AuthContext.Provider>
       </Switch>
     </BrowserRouter>
-  );
+   
+  )
+
 }
+
+const Main = withRouter(({ location }) => {
+  return (
+    <div>
+      {
+        location.pathname !== '/login' && 
+        location.pathname !== '/register' &&
+         <MenuComp/>
+      }
+      <Route exact path="/" component={HomeComp} />
+      <Route exact path="/homepage" component={HomeComp} />
+      <Route exact path="/login" component={LoginComponent} />
+      <Route exact path="/register" component={RegisterComp} />
+      <Route exact path="/property" component={Services} />
+      <Route exact path="/property/tambah" component={TambahComp} />
+      <Route exact path="/property/edit" component={EditComp} />      
+    </div>
+  )
+})
 
 export default App;

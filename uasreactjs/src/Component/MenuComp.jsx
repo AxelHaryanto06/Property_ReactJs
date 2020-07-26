@@ -6,42 +6,68 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,    
-    NavbarText,
-    Button
+    NavLink,
+    Button,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText
 } from 'reactstrap';
 import { AuthContext } from '../App';
+import "./CSS/Menu.css"
+import { Link } from 'react-router-dom';
 
-function MenuComp() {
+const MenuComp = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
 
-    const {state, dispatch} = useContext(AuthContext)
+    const { state, dispatch } = useContext(AuthContext)
 
     return (
         <div>
-            <Navbar className="navbar-dark bg-dark" expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <Navbar color="light" light expand="md">
+                <NavbarBrand href="/">KuyProperty</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
-                        </NavItem>                                               
+                            <Link to="/">Home</Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/property">Services</Link>
+                        </NavItem>
                     </Nav>
                     <NavbarText>
-                        <Button onClick={()=> dispatch({
-                            type:"LOGOUT"
+                    {state.isAuthenticated && (
+                        <Button onClick={() => dispatch({
+                            type: "LOGOUT"
                         })}>
-                            {state.isAuthenticated && (
-                                <NavLink>"LOGOUT"</NavLink>
+                        LOGOUT     
+                        </Button>                                
                             )}
-
-                        </Button>
+                        
                     </NavbarText>
                 </Collapse>
             </Navbar>
         </div>
+        // <div>
+        //     <Navbar className="navbar-dark bg-dark" expand="md">
+        //         <NavbarBrand to="/">KuyProperty</NavbarBrand>
+        //         <NavbarToggler onClick={toggle} />
+        //         <Collapse isOpen={isOpen} navbar>
+        //             <Nav className="mr-auto" navbar>
+        //                 <NavItem>
+        //                     <NavLink to="/" className="nav-link">Home</NavLink>
+        //                 </NavItem>
+        //                 <NavItem>
+        //                     <NavLink to="/property" className="nav-link">Services</NavLink>
+        //                 </NavItem>
+        //             </Nav>
+
+        //         </Collapse>
+        //     </Navbar>
+        // </div>
     )
 }
 
