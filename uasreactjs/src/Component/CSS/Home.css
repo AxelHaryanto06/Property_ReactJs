@@ -32,3 +32,15 @@
     color: #FFCA3A;
     font-family: 'Poppins', sans-serif;
 }
+
+/* Footer */
+
+.building{
+    position: absolute;
+    width: 829px;
+    height: 262px;
+    left: 269px;
+    top: 458px;
+    opacity: 50%;
+    background: url(../Img/12125-NNZAB0-removebg-preview.png);
+}

@@ -15,6 +15,10 @@ function HomeComp() {
                 </div>
                 <p className="display2">Sudah punya akun ? <Link className="linkto" to="/login">Login</Link></p>
             </div>
+
+            <div>
+                <div className="building"></div>
+            </div>
         </div>
     )
 }
