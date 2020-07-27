@@ -1,0 +1,34 @@
+/* Jumbotron */
+
+.home{
+    position: absolute;
+    width: 1366px;
+    height: 226px;
+    left: 0px;
+    top: 60px;
+    
+    background: #253870;
+}
+
+.display1{
+    color: white;
+    margin-top: 45px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.display2{
+    color: white;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.linkto{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.linkto:hover{
+    color: #FFCA3A;
+    font-family: 'Poppins', sans-serif;
+}
