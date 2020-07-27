@@ -8,6 +8,7 @@ import Services from './Component/Services';
 import TambahComp from './Component/TambahComp';
 import { Navbar } from 'reactstrap';
 import EditComp from './Component/EditComp';
+import AboutComp from './Component/AboutComp';
 
 //Context
 export const AuthContext = createContext()
@@ -91,7 +92,8 @@ const Main = withRouter(({ location }) => {
       <Route exact path="/register" component={RegisterComp} />
       <Route exact path="/property" component={Services} />
       <Route exact path="/property/tambah" component={TambahComp} />
-      <Route exact path="/property/edit" component={EditComp} />      
+      <Route exact path="/property/edit" component={EditComp} />    
+      <Route exact path="/about" component={AboutComp} />  
     </div>
   )
 })

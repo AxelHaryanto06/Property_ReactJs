@@ -1,0 +1,178 @@
+/* Box */
+
+.box{
+    position: absolute;
+    width: 1366px;
+    height: 141.89px;
+    left: 0px;
+    top: 56px;
+    
+    background: #253870;
+}
+
+/* KUYPROPERTY */
+
+.logo-box{
+    position: absolute;
+    width: 722px;
+    height: 115.05px;
+    left: 22px;
+    top: 69px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 100px;
+    line-height: 150px;
+    
+    color: #FFFFFF;
+}
+
+/* Rectangle 13 */
+
+.about-box{
+    position: absolute;
+    width: 209px;
+    height: 170.73px;
+    left: 74px;
+    top: 273px;
+    
+    background: #253870;
+    border-radius: 10px;
+}
+
+/* KUYPROPERTY KECIL */
+
+.aboutlogo-box{
+    position: absolute;
+    width: 202.13px;
+    height: 32.38px;
+    left: 80.87px;
+    top: 341.69px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    
+    color: #FFFFFF;
+}
+
+/* About Text */
+
+.about-text{
+    position: absolute;
+    width: 595px;
+    height: 171px;
+    left: 320px;
+    top: 288px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: justify;
+    
+    color: #000000;
+}
+
+/* Picture 1 */
+
+.picture-1{
+    position: absolute;
+    width: 300px;
+    height: 199px;
+    left: 125px;
+    top: 555px;
+
+    border-radius: 10px;
+}
+
+/* Picture 2 */
+
+.picture-2{
+    position: absolute;
+    width: 298.88px;
+    height: 199px;
+    left: 533px;
+    top: 555px;
+
+    border-radius: 10px;
+}
+
+/* Picture 3 */
+
+.picture-3{
+    position: absolute;
+    width: 300px;
+    height: 199px;
+    left: 941px;
+    top: 555px;
+
+    border-radius: 10px;
+}
+
+/* Aman */
+
+.aman{
+    position: absolute;
+    width: 76px;
+    height: 36px;
+    left: 237px;
+    top: 763px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    text-align: justify;
+    
+    color: #000000;
+}
+
+/* Nyaman */
+
+.nyaman{
+    position: absolute;
+    width: 108px;
+    height: 36px;
+    left: 629px;
+    top: 763px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    text-align: justify;
+    
+    color: #000000;
+}
+
+/* Damai */
+
+.damai{
+    position: absolute;
+    width: 83px;
+    height: 36px;
+    left: 1049px;
+    top: 763px;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    text-align: justify;
+    
+    color: #000000;
+}

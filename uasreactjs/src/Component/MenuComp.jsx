@@ -32,10 +32,13 @@ const MenuComp = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <Link to="/">Home</Link>
+                            <Link to="/" className="navlink">Home</Link>
                         </NavItem>
                         <NavItem>
-                            <Link to="/property">Services</Link>
+                            <Link to="/about" className="navlink">About</Link>
+                        </NavItem>
+                        <NavItem>
+                            <Link to="/property" className="navlink">Services</Link>
                         </NavItem>
                     </Nav>
                     <NavbarText>
